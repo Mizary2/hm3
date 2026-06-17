@@ -26,16 +26,20 @@ public class Main {
         int paperForStudent = AllPaper/(c1+c2+c3);
 
         int bottlesIn2minutes = 16;
-        int b1 = bottlesIn2minutes*10;
-        int bottlesInDay = bottlesIn2minutes*3*24;
-        int bottlesIn3day = bottlesInDay*3;
-        int bottlesInMonth = bottlesIn3day*10;
+        int bottlesIn1minutes = bottlesIn2minutes / 2;
+        int day1 = 1440;
+        int bottlesIn20minutes = bottlesIn1minutes * 20;
+        int bottlesInDay = bottlesIn1minutes * day1;
+        int bottlesIn3day = bottlesIn1minutes * (day1 * 3);
+        int bottlesInMonth = bottlesIn1minutes * (day1 * 30);
 
+        int paintAll = 120;
         int brownPaint = 4;
         int whitePaint = 2;
-        int count = 9;
-        int brownPaintForAllRoom = brownPaint*count;
-        int whitePaintForAllRoom = whitePaint*count;
+        int count = 6;
+        int classroom = paintAll / count;
+        int whitePaintall = classroom * 2;
+        int brownPaintall = classroom * 4;
 
 //        Бананы — 5 штук (1 банан — 80 грамм).
 //        Молоко — 200 мл (100 мл = 105 грамм).
@@ -46,7 +50,7 @@ public class Main {
         int milk = 105;
         int iceCream = 100;
         int agg = 70;
-        int weigthInGram= banan*2+milk*2+iceCream*2+agg*4;
+        int weigthInGram= banan*5+milk*2+iceCream*2+agg*4;
         int weigthInKg =weigthInGram/1000;
 
         //сбросить 7 кг
@@ -104,12 +108,12 @@ public class Main {
         System.out.println("На каждого ученика рассчитано " + paperForStudent + " листов бумаги");
         System.out.println();
 
-        System.out.println("За "+"20 минут" + " машина произвела " +b1 + " штук бутылок");
+        System.out.println("За "+"20 минут" + " машина произвела " +bottlesIn20minutes + " штук бутылок");
         System.out.println("За " +"сутки" + " машина произвела " +bottlesInDay + " штук бутылок");
         System.out.println("За " +"3 дня" + " машина произвела " +bottlesIn3day + " штук бутылок");
         System.out.println("За " +"месяц" + " машина произвела " +bottlesInMonth + " штук бутылок");
         System.out.println();
-        System.out.println("В школе, где "+count +" классов, нужно "+whitePaintForAllRoom+" банок белой краски и "+brownPaintForAllRoom+" банок коричневой краски");
+        System.out.println("В школе, где "+classroom +" классов, нужно "+whitePaintall+" банок белой краски и "+brownPaintall+" банок коричневой краски");
         System.out.println();
         System.out.println(weigthInGram);
         System.out.println(weigthInKg);
@@ -120,6 +124,6 @@ public class Main {
         System.out.println();
         System.out.println("Маша теперь получает "+newSalaryForMasha+" рублей. Годовой доход вырос на "+nextYear1+" рублей");
         System.out.println("Денис теперь получает "+newSalaryForDenis+" рублей. Годовой доход вырос на "+nextYear2+" рублей");
-        System.out.println("Кристина теперь получает "+newSalaryForKristina+" рублей. Годовой доход вырос на "+nextYear1+" рублей");
+        System.out.println("Кристина теперь получает "+newSalaryForKristina+" рублей. Годовой доход вырос на "+nextYear3+" рублей");
 }
 }
